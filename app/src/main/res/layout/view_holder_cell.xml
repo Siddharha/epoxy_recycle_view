@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="data"
-            type="in.creativelizard.epoxyrecycler.DataModel.Item" />
+            name="bodyData"
+            type="in.creativelizard.epoxyrecycler.BodyData.Item" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +26,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="@{data.name}"
+            android:text="@{bodyData.name}"
             tools:text="Siddhartha Maji" />
 
         <TextView
@@ -42,7 +42,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName"
-            android:text="@{`Age - `+String.valueOf(data.age)}"
+            android:text="@{`Age - `+String.valueOf(bodyData.age)}"
             tools:text="Age - 35" />
 
         <TextView
@@ -61,7 +61,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAge"
             app:layout_constraintVertical_bias="0.0"
-            android:text="@{`Number: `+String.valueOf(data.number)}"
+            android:text="@{`Number: `+String.valueOf(bodyData.number)}"
             tools:text="9564751914" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
