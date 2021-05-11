@@ -2,6 +2,7 @@ package `in`.creativelizard.epoxyrecycler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadData() {
         datas = getData() //From Model data
+
+        if(intent.hasExtra("value")){
+            val headerItm = intent.getStringExtra("value")
+            Toast.makeText(this,headerItm,Toast.LENGTH_LONG).show()
+
+        }
 
         rlItems.withModels {
             datas.dataList.forEachIndexed { index, item ->
